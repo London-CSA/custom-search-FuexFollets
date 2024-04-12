@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>[TITLE HERE]</title>
+		<link href="/static/style.css" rel="stylesheet"></head>
+		<script>
+			function toggleButton(){
+				if(document.getElementById("txtSearch").value == "")
+				{
+					document.getElementById("btnSearch").disabled = true;
+				}
+				else{
+					document.getElementById("btnSearch").disabled = false;
+				}
+			}
+
+			function getDate(){
+				// TBD display current date in the span tag with id="date" in web page footer
+				// hint: https://www.w3schools.com/js/tryit.asp?filename=tryjs_date_current
+			}
+		</script>
+    <body onload="getDate()">
+			<div class="container">
+        <form autocomplete="off" action="https://www.google.com/search" method="get">
+				<table>
+					<thead><tr><th>
+						[LOGO FOR SITE YOU ARE SEARCHING]
+					</th></tr></thead>
+					<tbody>
+					<tr>
+						<td>
+            <input name="q" id="txtSearch" type="text" placeholder="PLACEHOLDER HERE" onkeyup="toggleButton()">
+						<input type="hidden" name="q" value="[SITE SEARCH]">
+            <input type="submit" disabled value="Search" name="btnSearch" id="btnSearch">
+						</td>
+					</tr>
+					<tr>
+						<td class="footer"><img height="14px" src="static/leaf.png">&nbsp;&nbsp;Carbon neutral since 2023</td>
+					</tr>
+					<tr>
+						<td class="footer">[LINK TO SITE YOU ARE SEARCHING]
+						&nbsp;|&nbsp;<span id="date">[JAVASCRIPT DATE HERE]</span>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+        </form>
+			</div>
+    </body>
+</html>
