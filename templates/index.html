@@ -1,51 +1,57 @@
 <!DOCTYPE html>
 
 <html lang="en">
-    <head>
-        <title>[TITLE HERE]</title>
-		<link href="/static/style.css" rel="stylesheet"></head>
-		<script>
-			function toggleButton(){
-				if(document.getElementById("txtSearch").value == "")
-				{
-					document.getElementById("btnSearch").disabled = true;
-				}
-				else{
-					document.getElementById("btnSearch").disabled = false;
-				}
-			}
 
-			function getDate(){
-				// TBD display current date in the span tag with id="date" in web page footer
-				// hint: https://www.w3schools.com/js/tryit.asp?filename=tryjs_date_current
-			}
-		</script>
-    <body onload="getDate()">
-			<div class="container">
+<head>
+    <title>Mack Donaler</title>
+    <link href="/static/style.css" rel="stylesheet">
+    <script src="/static/script.js"></script>
+    <link rel="icon" type="image/x-icon" href="static/favicon.ico">
+</head>
+<script>
+</script>
+
+<body onload="getDate()">
+    <div class="container">
         <form autocomplete="off" action="https://www.google.com/search" method="get">
-				<table>
-					<thead><tr><th>
-						[LOGO FOR SITE YOU ARE SEARCHING]
-					</th></tr></thead>
-					<tbody>
-					<tr>
-						<td>
-            <input name="q" id="txtSearch" type="text" placeholder="PLACEHOLDER HERE" onkeyup="toggleButton()">
-						<input type="hidden" name="q" value="[SITE SEARCH]">
-            <input type="submit" disabled value="Search" name="btnSearch" id="btnSearch">
-						</td>
-					</tr>
-					<tr>
-						<td class="footer"><img height="14px" src="static/leaf.png">&nbsp;&nbsp;Carbon neutral since 2023</td>
-					</tr>
-					<tr>
-						<td class="footer">[LINK TO SITE YOU ARE SEARCHING]
-						&nbsp;|&nbsp;<span id="date">[JAVASCRIPT DATE HERE]</span>
-						</td>
-					</tr>
-					</tbody>
-				</table>
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                            <div class="crazy-image-container">
+                                <img src="static/image-1.png" alt="Image 1">
+                                <img src="static/image-2.png" alt="Image 2">
+                                <img src="static/image-3.png" alt="Image 3">
+                                <img src="static/image-4.png" alt="Image 4">
+                            </div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <input name="q" id="txtSearch" type="text"
+                                placeholder="Wha' yo' whan' frah' Mick' Danalds'?" onkeyup="toggleButton()">
+                            <input type="hidden" name="q" value="site:mcdonalds.com">
+                            <input type="submit" disabled value="Search" name="btnSearch" id="btnSearch">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="footer"><img height="14px" src="static/leaf.png">&nbsp;&nbsp;Carbon provocative since
+                            2023</td>
+                    </tr>
+                    <tr>
+                        <td class="footer">
+                            <a
+                                href="https://www.mcdonalds.com/us/en-us.html">https://www.mcdonalds.com/us/en-us.html</a>
+                            &nbsp;|&nbsp;<a href="https://www.timeanddate.com/worldclock/" id="date">Date
+                                Loading...</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </form>
-			</div>
-    </body>
+    </div>
+</body>
+
 </html>

@@ -1,5 +1,5 @@
 body {
-    background-color: #ffffff;
+    background-color: #FFC72C;
     color: #212529;
     font-size: 2rem;
     font-weight: 400;
@@ -19,7 +19,6 @@ body {
 
 
 button, input[type="submit"] {
-    background-color: #5aabf1;
     border: 1px solid transparent;
     border-radius: 0.25rem;
     font-size: 0.95rem;
@@ -32,25 +31,42 @@ button, input[type="submit"] {
 }
 
 button, input[type="submit"]:hover:enabled{
-	background-color: #00FFFF;
+    animation: rainbow 0.1s infinite alternate;
 }
 
 input[type="text"] {
   	font-size: 0.95rem;
     font-weight: 400;
     line-height: 1.5;
-
+    width: 370px;
 }
 
+/* flash rainbow colors, change the commented code below */
+
 input[type="text"]:hover, input[type="number"]:hover {
-    background-color: #f5f5f5;
-    transition: color 2s ease-in-out, background-color 0.15s ease-in-out;
+  animation: rainbow 0.1s infinite alternate;
+  /* Add some scuffed styles for a crazy look */
+  border: 2px solid red; /* Bold, mismatched border */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Slight shadow */
+}
+
+@keyframes rainbow {
+  from { background-color: red; }
+  to { background-color: violet; }
+  25% { background-color: orange; }
+  50% { background-color: yellow; }
+  70% { background-color: lightgreen; }
+  80% { background-color: blue; }
 }
 
 table {
     background-color: transparent;
     margin-bottom: 1rem;
     width: 100%;
+}
+
+table:hover {
+    animation: rainbow 0.1s infinite alternate;
 }
 
 table th 
@@ -60,8 +76,17 @@ table th
     vertical-align: middle;
 }
 
+table th:hover {
+    animation: rainbow 0.1s infinite alternate;
+}
+
 table td{
 	background-color: #BFD4F6;
+}
+
+table td:hover {
+
+    animation: rainbow 0.1s infinite alternate;
 }
 
 td.footer{
@@ -72,6 +97,10 @@ td.footer{
 	color: #70757a;
 }
 
+tf.footer:hover {
+    animation: rainbow 0.1s infinite alternate;
+}
+
 td.footer a{
 	color:#70757a;
 	text-decoration: none;
@@ -80,3 +109,20 @@ td.footer a{
 td.footer a:hover{
 	text-decoration: underline;
 }
+
+.crazy-image-container {
+  display: flex; /* Use flexbox for side-by-side layout */
+  width: fit-content; /* Adjust width as needed */
+  overflow: hidden; /* Hide overflowing content */
+}
+
+.crazy-image-container img {
+  width: 25%; /* Set image width to 25% for four images */
+  animation: rotate 2s infinite linear; /* Animation for rotation */
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+

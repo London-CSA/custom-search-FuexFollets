@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "custom-search-fuexfollets"
+version = "0.1.0"
+description = ""
+authors = ["FuexFollets <fuex9follets@gmail.com>"]
+readme = "README.md"
+packages = [{include = "custom_search_fuexfollets"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+flask = "^3.0.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
